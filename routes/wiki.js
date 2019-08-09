@@ -7,10 +7,8 @@ const { main } = require('../views');
 
 router.get('/', (req, res, next) => {
     //res.redirect('/wiki');
-    Page.findAll().then(pages => {
-        //main(pages);
-        console.log('Pages', pages);
-    })
+    const pages = Page.findAll();
+    res.send(main(pages));
     //res.send('Got to GET /wiki/');
 });
 

@@ -17,8 +17,8 @@ app.use('/user', userRouter);
 
 app.get('/', async (req, res, next) => {
     try {
-        res.send(layout(''));
-        //res.redirect('/wiki');
+        //res.send(layout(''));
+        res.redirect('/wiki');
         console.log('Hello World!');
     } catch(error) {
         next(error);
